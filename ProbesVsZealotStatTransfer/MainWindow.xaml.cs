@@ -79,6 +79,7 @@ namespace NuzzProbesvZealot2Restorer
             var banks = Directory.GetFiles(BankFile.PathBase, BankName + ".SC2Bank", SearchOption.AllDirectories);
             
             return banks
+                .Where(x => x.EndsWith(System.IO.Path.DirectorySeparatorChar + BankName + ".SC2Bank"))
                 .Select(path => new BankFile(path))
                 .ToList();
         }

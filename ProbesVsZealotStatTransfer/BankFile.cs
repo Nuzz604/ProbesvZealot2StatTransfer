@@ -92,6 +92,8 @@ namespace NuzzProbesvZealot2Restorer
 
         private MapVersion GetMapVersion()
         {
+            if (PathParts[4] != "ProbesvZealot2.SC2Bank")
+                return NuzzProbesvZealot2Restorer.MapVersion.Unknown;
             if (MapHandle == "1-S2-1-2970949")
                 return NuzzProbesvZealot2Restorer.MapVersion.PvZ2KorvinOfficial;
             if (MapHandle == "1-S2-1-4130515")
